@@ -4,15 +4,39 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
+    <style>
+      .component-box {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+      }
 
+      .component-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    </style>
     <script type="module" src="/build/swiss-stencils-cases.esm.js"></script>
     <script nomodule src="/build/swiss-stencils-cases.js"></script>
   </head>
   <body>
-    <!-- <notes-card></notes-card> -->
-    <!-- <multi-selection-list></multi-selection-list> -->
-    <!-- <mandatory-input></mandatory-input> -->
-    <!-- <expandable-panel>This is the content of expandable component</expandable-panel> -->
-    <high-contrast-toggle></high-contrast-toggle>
+    <div class="component-box">
+      <div class="component-title">Multi Selection List</div>
+      <multi-selection-list></multi-selection-list>
+    </div>
+    <div class="component-box">
+      <div class="component-title">Mandatory Input</div>
+      <mandatory-input></mandatory-input>
+    </div>
+    <div class="component-box">
+      <div class="component-title">Expandable Panel</div>
+      <expandable-panel>This is the content of expandable component</expandable-panel>
+    </div>
+    <div class="component-box">
+      <div class="component-title">High Contrast Toggle</div>
+      <high-contrast-toggle></high-contrast-toggle>
+    </div>
   </body>
 </html>
