@@ -1,0 +1,34 @@
+.expandable-panel {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.panel-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle-icon {
+    font-size: 20px;
+}
+
+
+.panel-content {
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+.expanded .panel-content {
+    display: block;
+}
+
+.collapsed .panel-content {
+    display: none;
+}

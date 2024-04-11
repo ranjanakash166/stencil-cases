@@ -8,4 +8,3 @@
  * to consume components of this package as outlined in the `README.md`.
  */
 
-export { format } from './utils/utils';

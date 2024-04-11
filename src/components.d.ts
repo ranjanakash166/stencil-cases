@@ -6,56 +6,84 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface ExpandablePanel {
+    }
+    interface HighContrastToggle {
+    }
+    interface MandatoryInput {
+    }
+    interface MultiSelectionList {
+    }
+    interface NotesCard {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLExpandablePanelElement extends Components.ExpandablePanel, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLExpandablePanelElement: {
+        prototype: HTMLExpandablePanelElement;
+        new (): HTMLExpandablePanelElement;
+    };
+    interface HTMLHighContrastToggleElement extends Components.HighContrastToggle, HTMLStencilElement {
+    }
+    var HTMLHighContrastToggleElement: {
+        prototype: HTMLHighContrastToggleElement;
+        new (): HTMLHighContrastToggleElement;
+    };
+    interface HTMLMandatoryInputElement extends Components.MandatoryInput, HTMLStencilElement {
+    }
+    var HTMLMandatoryInputElement: {
+        prototype: HTMLMandatoryInputElement;
+        new (): HTMLMandatoryInputElement;
+    };
+    interface HTMLMultiSelectionListElement extends Components.MultiSelectionList, HTMLStencilElement {
+    }
+    var HTMLMultiSelectionListElement: {
+        prototype: HTMLMultiSelectionListElement;
+        new (): HTMLMultiSelectionListElement;
+    };
+    interface HTMLNotesCardElement extends Components.NotesCard, HTMLStencilElement {
+    }
+    var HTMLNotesCardElement: {
+        prototype: HTMLNotesCardElement;
+        new (): HTMLNotesCardElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "expandable-panel": HTMLExpandablePanelElement;
+        "high-contrast-toggle": HTMLHighContrastToggleElement;
+        "mandatory-input": HTMLMandatoryInputElement;
+        "multi-selection-list": HTMLMultiSelectionListElement;
+        "notes-card": HTMLNotesCardElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface ExpandablePanel {
+    }
+    interface HighContrastToggle {
+    }
+    interface MandatoryInput {
+    }
+    interface MultiSelectionList {
+    }
+    interface NotesCard {
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "expandable-panel": ExpandablePanel;
+        "high-contrast-toggle": HighContrastToggle;
+        "mandatory-input": MandatoryInput;
+        "multi-selection-list": MultiSelectionList;
+        "notes-card": NotesCard;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "expandable-panel": LocalJSX.ExpandablePanel & JSXBase.HTMLAttributes<HTMLExpandablePanelElement>;
+            "high-contrast-toggle": LocalJSX.HighContrastToggle & JSXBase.HTMLAttributes<HTMLHighContrastToggleElement>;
+            "mandatory-input": LocalJSX.MandatoryInput & JSXBase.HTMLAttributes<HTMLMandatoryInputElement>;
+            "multi-selection-list": LocalJSX.MultiSelectionList & JSXBase.HTMLAttributes<HTMLMultiSelectionListElement>;
+            "notes-card": LocalJSX.NotesCard & JSXBase.HTMLAttributes<HTMLNotesCardElement>;
         }
     }
 }
