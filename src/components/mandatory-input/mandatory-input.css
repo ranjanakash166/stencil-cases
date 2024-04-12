@@ -1,29 +1,38 @@
 :host {
-    display: block;
-    font-family: Arial, sans-serif;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  input {
-    width: 200px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .mandatory-indicator {
-    color: red;
-    margin-left: 5px;
-  }
-  
-  .error-message {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
-  }
-  
+  display: block;
+  font-family: Arial, sans-serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-error {
+  border-color: red;
+}
+
+.mandatory-indicator {
+  color: red;
+  margin-left: 5px;
+}
+
+.error-message {
+  color: red;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.success-message {
+  color: green;
+  font-size: 16px;
+  margin-top: 5px;
+}

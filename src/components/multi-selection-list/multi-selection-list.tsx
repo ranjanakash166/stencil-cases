@@ -1,4 +1,4 @@
-import { Component, h, State } from '@stencil/core';
+import { Component, h, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'multi-selection-list',
@@ -7,34 +7,38 @@ import { Component, h, State } from '@stencil/core';
 })
 export class MultiSelectionList {
   @State() selectedItems: string[] = [];
-  @State() options: string[] = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
 
-  toggleItemSelection(event: Event) {
-    const selectedOption = (event.target as HTMLSelectElement).value;
-    const index = this.selectedItems.indexOf(selectedOption);
+  @Prop() options: string[] = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
+
+  toggleItemSelection(option: string) {
+    const index = this.selectedItems.indexOf(option);
     if (index > -1) {
-      // Item already selected, remove it
       this.selectedItems.splice(index, 1);
     } else {
-      // Item not selected, add it
-      this.selectedItems.push(selectedOption);
+      this.selectedItems.push(option);
     }
-    // Update selected items state
     this.selectedItems = [...this.selectedItems];
   }
 
   render() {
     return (
       <div>
-        <h3>Multi-selection List</h3>
-        <select multiple onChange={(event) => this.toggleItemSelection(event)}>
+        <ul>
           {this.options.map(option => (
-            <option value={option} selected={this.selectedItems.includes(option)}>
+            <li 
+              class={this.selectedItems.includes(option) ? 'selected' : ''}
+              onClick={() => this.toggleItemSelection(option)}
+            >
+              <input 
+                type="checkbox" 
+                checked={this.selectedItems.includes(option)} 
+                onChange={() => this.toggleItemSelection(option)}
+              />
               {option}
-            </option>
+            </li>
           ))}
-        </select>
-        <div>Selected Items: {this.selectedItems.join(', ')}</div>
+        </ul>
+        <div class="selected-item">Selected Items: {this.selectedItems.join(', ')}</div>
       </div>
     );
   }

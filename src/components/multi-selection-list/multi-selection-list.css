@@ -1,30 +1,55 @@
 :host {
-    display: block;
-    font-family: Arial, sans-serif;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  li {
-    padding: 8px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  li:hover {
-    background-color: #f0f0f0;
-    cursor: pointer;
-  }
-  
-  .selected {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .selected:hover {
-    background-color: #0056b3;
-  }
-  
+  display: block;
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+}
+
+.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.selected:hover {
+  background-color: #0056b3;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label:before {
+  content: '\2713';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 1em;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.selected-item{
+  margin-top: 1rem !important;
+}

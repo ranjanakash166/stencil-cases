@@ -13,6 +13,7 @@ export namespace Components {
     interface MandatoryInput {
     }
     interface MultiSelectionList {
+        "options": string[];
     }
     interface NotesCard {
     }
@@ -64,6 +65,7 @@ declare namespace LocalJSX {
     interface MandatoryInput {
     }
     interface MultiSelectionList {
+        "options"?: string[];
     }
     interface NotesCard {
     }
